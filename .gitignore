@@ -1,0 +1,8 @@
+.claude/settings.local.json
+CLAUDE.local.md
+.projectmem/
+.codegraph/
+.env
+.env.*
+!.env.example
+.DS_Store
