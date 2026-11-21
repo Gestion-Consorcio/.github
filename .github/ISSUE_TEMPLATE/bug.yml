@@ -1,0 +1,63 @@
+name: Reporte de bug
+description: Reportar un error o comportamiento inesperado
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de abrir este reporte, buscá si ya existe un issue o PR abierto ejecutando `.agents/scripts/bug-issue-check.sh <palabra> [<palabra>]`.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área afectada
+      options:
+        - "area:frontend"
+        - "area:backend"
+        - "area:docs"
+        - "area:diseno"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción del problema
+      description: Explicá qué está fallando y dónde ocurre (pantalla, endpoint o archivo).
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducir
+      placeholder: |
+        1. Ir a...
+        2. Hacer clic en...
+        3. Observar...
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Resultado esperado vs actual
+      description: Qué debería pasar y qué está pasando en cambio.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia y entorno
+      description: Salida de consola, comando fallido, captura, navegador o versión.
+  - type: input
+    id: related-requirement
+    attributes:
+      label: Requerimiento relacionado
+      description: Si corresponde a un requerimiento funcional, indicá la referencia (por ejemplo `Gestion-Consorcio/docs#25`).
+      placeholder: "Gestion-Consorcio/docs#<N>"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Verificación previa
+      options:
+        - label: Busqué duplicados en issues, PRs y ramas activas (por ejemplo con `.agents/scripts/bug-issue-check.sh`).
+          required: true
+        - label: Confirmé que no incluye datos reales ni secretos (DNI, teléfonos reales o tokens).
+          required: true

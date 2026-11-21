@@ -1,0 +1,33 @@
+name: Épica de producto
+description: Agrupar requerimientos de un módulo (usar en Gestion-Consorcio/docs)
+labels: ["epic"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Objetivo del módulo
+      description: Problema que resuelve esta épica y lugar dentro del producto.
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Alcance
+      options:
+        - Inicial
+        - Posterior
+        - Idea
+    validations:
+      required: true
+  - type: textarea
+    id: actors
+    attributes:
+      label: Usuarios y roles involucrados
+      description: Qué membresías o actores participan (vecino, administrador, recepción, encargado, gestor, huésped).
+  - type: textarea
+    id: breakdown
+    attributes:
+      label: Desglose y criterios de aceptación
+      description: Requerimientos principales o sub-issues esperados y cómo se considera completa la épica.
+    validations:
+      required: true

@@ -1,0 +1,42 @@
+name: Tarea técnica
+description: Tarea acotada de implementación o mantenimiento en un repo
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objetivo y alcance
+      description: Qué se resuelve en esta tarea y qué queda explícitamente afuera.
+    validations:
+      required: true
+  - type: input
+    id: parent-requirement
+    attributes:
+      label: Requerimiento padre en docs
+      description: Referencia al requerimiento o épica funcional en `Gestion-Consorcio/docs` para enlazar como sub-issue cross-repo.
+      placeholder: "Gestion-Consorcio/docs#<N>"
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área principal
+      options:
+        - "area:frontend"
+        - "area:backend"
+        - "area:docs"
+        - "area:diseno"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de terminado
+      placeholder: |
+        - [ ] Criterio 1
+        - [ ] Criterio 2
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verificación prevista
+      description: Comandos o pruebas que tienen que pasar antes de abrir el PR (ej. `just verify`, `go test ./...`).

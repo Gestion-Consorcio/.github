@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Roadmap de la organización
+    url: https://github.com/orgs/Gestion-Consorcio/projects/1
+    about: Tablero transversal de épicas y tareas de docs, frontend y backend.
+  - name: Preguntas abiertas de producto (#8)
+    url: https://github.com/Gestion-Consorcio/docs/issues/8
+    about: Revisar decisiones abiertas antes de abrir una discusión duplicada.

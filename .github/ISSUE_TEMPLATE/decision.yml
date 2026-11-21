@@ -1,0 +1,23 @@
+name: Decisión o pregunta abierta
+description: Proponer una decisión de producto/arquitectura o abrir una duda en docs
+labels: ["documentation", "question"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto y pregunta
+      description: Qué ambigüedad apareció y qué flujo o módulo bloquea.
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Opciones evaluadas
+      description: Alternativas concretas con sus ventajas y compromisos.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Propuesta e impacto
+      description: Opción sugerida y qué archivos o issues impacta (`docs/decisiones.md`, `#8`, `frontend` o `backend`).
